@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sliding Navigation Drawer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="https://use.fontawesome.com/795dd48394.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> 
+    <style>
+        html,body{
+            height: 100%;
+        }
+        #drawer{
+            top:0;
+            height:100%;
+            width: 250px;
+            z-index: 1000;
+            position: absolute;
+            left:-250px;
+            background-color: #333;
+            box-shadow: #808285 2px 3px 4px;
+        }
+        #drawer-toggle-div{
+            top:0;
+            left:0;
+            z-index: 1000;
+            position: absolute;
+            background-color: #333;
+            box-shadow: #808285 2px 3px 4px;
+        }
+        #drawer-toggle-button{
+            color: white;
+            padding: 10px 10px;
+            font-size: 40px;
+        }
+        #drawer-ul
+        {
+            list-style: none;
+            padding: 0;
+            margin:0;
+        }
+        .drawer-li{
+            color: #fff;
+            font-family: 'Roboto','Open Sans', sans-serif;
+            font-size: 15px; 
+            padding: 15px 20px 15px 10px;
+            /*background-color: yellow;*/
+        }
+        .drawer-li:hover{
+            color: rgba(0,0,0,0.5);
+            background-color: #fff;
+        }
+        .support-text{
+            padding-left: 8px;
+        }
+        #user-details img
+        {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 45%;
+            display: block;
+            margin: auto auto;
+        }
+        #user-details{
+            text-align: center;
+            color: #fff;
+            font-family: 'Roboto',sans-serif;
+            font-size: 12px;
+            padding-bottom: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="drawer-toggle-div">
+        <span id="drawer-toggle-button">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+        </span>
+    </div>
+    <div id="drawer">
+    <ul id="drawer-ul">
+        <li id="user-details">
+            <img src="../assets/img/user-4.png">
+            kumar.swapnil170@gmail.com
+        </li>
+        <li class="drawer-li">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span class="support-text">Home</span>
+        </li>
+        <li class="drawer-li">
+            <i class="fa fa-terminal" aria-hidden="true"></i>
+            <span class="support-text">Code</span>
+        </li>
+        <li class="drawer-li">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <span class="support-text">Collaborate</span>
+        </li>
+        <li class="drawer-li">
+            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+            <span class="support-text">Statistics</span>
+        </li>
+        <li class="drawer-li">
+            <i class="fa fa-sign-out" aria-hidden="true"></i>
+            <span class="support-text">Sign Out</span>
+        </li>
+    </ul>
+    </div>
+
+    <script type="text/javascript">
+        $('#drawer-toggle-button').on('click',function(){
+            if($('#drawer-toggle-div').css('left') == '0px')
+            {
+                $('#drawer-toggle-div').animate({
+                    left:"+250px"
+                },1000, function(){
+                    //animation complete
+                });    
+
+                $('#drawer').animate({
+                    left:"+0px"
+                }, 1000, function(){
+                    //animation complete
+                })
+            }
+            else
+            {
+                $('#drawer-toggle-div').animate({
+                    left:"+0px"
+                },1000, function(){
+                    //animation complete
+                });
+
+                $('#drawer').animate({
+                    left:"-250px"
+                }, 1000, function(){
+                    //animation complete
+                })   
+            }
+            
+            
+        }); 
+    </script>
+</body>
+</html>
