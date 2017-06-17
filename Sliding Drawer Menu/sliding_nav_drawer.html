@@ -8,70 +8,7 @@
     <script src="../assets/js/bootstrap.js"></script>
     <script src="https://use.fontawesome.com/795dd48394.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> 
-    <style>
-        html,body{
-            height: 100%;
-        }
-        #drawer{
-            top:0;
-            height:100%;
-            width: 250px;
-            z-index: 1000;
-            position: absolute;
-            left:-250px;
-            background-color: #333;
-            box-shadow: #808285 2px 3px 4px;
-        }
-        #drawer-toggle-div{
-            top:0;
-            left:0;
-            z-index: 1000;
-            position: absolute;
-            background-color: #333;
-            box-shadow: #808285 2px 3px 4px;
-        }
-        #drawer-toggle-button{
-            color: white;
-            padding: 10px 10px;
-            font-size: 40px;
-        }
-        #drawer-ul
-        {
-            list-style: none;
-            padding: 0;
-            margin:0;
-        }
-        .drawer-li{
-            color: #fff;
-            font-family: 'Roboto','Open Sans', sans-serif;
-            font-size: 15px; 
-            padding: 15px 20px 15px 10px;
-            /*background-color: yellow;*/
-        }
-        .drawer-li:hover{
-            color: rgba(0,0,0,0.5);
-            background-color: #fff;
-        }
-        .support-text{
-            padding-left: 8px;
-        }
-        #user-details img
-        {
-            padding-top: 10px;
-            padding-bottom: 10px;
-            width: 45%;
-            display: block;
-            margin: auto auto;
-        }
-        #user-details{
-            text-align: center;
-            color: #fff;
-            font-family: 'Roboto',sans-serif;
-            font-size: 12px;
-            padding-bottom: 12px;
-        }
-
-    </style>
+    <link href="sliding_nav_drawer.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div id="drawer-toggle-div">
@@ -108,39 +45,7 @@
     </ul>
     </div>
 
-    <script type="text/javascript">
-        $('#drawer-toggle-button').on('click',function(){
-            if($('#drawer-toggle-div').css('left') == '0px')
-            {
-                $('#drawer-toggle-div').animate({
-                    left:"+250px"
-                },1000, function(){
-                    //animation complete
-                });    
-
-                $('#drawer').animate({
-                    left:"+0px"
-                }, 1000, function(){
-                    //animation complete
-                })
-            }
-            else
-            {
-                $('#drawer-toggle-div').animate({
-                    left:"+0px"
-                },1000, function(){
-                    //animation complete
-                });
-
-                $('#drawer').animate({
-                    left:"-250px"
-                }, 1000, function(){
-                    //animation complete
-                })   
-            }
-            
-            
-        }); 
+    <script type="text/javascript" src="sliding_nav_drawer.js">
     </script>
 </body>
 </html>
