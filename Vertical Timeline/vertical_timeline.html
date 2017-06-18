@@ -2,8 +2,200 @@
 <html>
 <head>
 	<title>Vertical Timeline</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="https://use.fontawesome.com/795dd48394.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300" rel="stylesheet"> 
+    <style type="text/css">
+    	*{
+    		margin:0;
+    		padding: 0;
+    	}
+    	html,body,.container-fluid,#working-div,#parent-row{
+    		height:100%;
+    	}
+
+    	#resume-header{
+    		padding-top: 20px;
+    		background-color: #263238;
+    	}
+    	#resume-header div{
+    		text-align: right;
+    	}
+    	#resume-header-span{
+    		color: #fff;
+    		border-bottom: 2px solid white;
+    		/*margin-left: 80%;*/
+    		font-size: 16px;
+
+    	}
+    	#row2{
+    		
+    		height: 155px;
+    		background-color: #546e7a;
+    		box-shadow: #808285 2px 3px 4px;
+
+    	}
+    	#row3{
+    		background-color: #cfd8dc;
+    		height:130px;
+    		padding: 2.5% 5% 2.5% 5%;
+    		text-align: justify;
+    	}
+    	#name,#tagline{
+    		margin-top: 10%;
+    		color: #fff;
+    		margin-left: 10%;
+    		font-size: 40px;
+    		font-family: 'Roboto',sans-serif;
+    		font-weight: lighter;
+    	}
+    	#tagline{
+    		margin-top: 0;
+    		font-size: 20px;
+    	}
+    	#pic-id{
+    		padding-top: 40px;
+    		text-align: right;
+    		color: white;
+    		font-size: 20px;
+    		padding-right: 8%;
+    	}
+    	#about-me{
+    		font-family: 'Open Sans',sans-serif;
+
+    	}
+    	#main-resume-left{
+    		padding-left: 5%;
+    		padding-top: 20px;
+    		background-color: rgba(255,255,255,0.8);
+    		border-left:1px solid #cfd8dc; 
+    		/*box-shadow: #808285 2px 3px 4px;*/
+    		/*z-index: 100;*/
+    	}
+    	#personal-ul{
+    		list-style: none;
+    		padding-top: 20px;
+    	}
+    	.personal-li{
+    		font-family: 'Roboto', sans-serif;
+
+    	}
+    	.li-lhs{
+    		font-weight: bold;
+    	}
+    	.divider {
+		  height: 1px;
+		  width:100%;
+		  display:block; /* for use on default inline elements like span */
+		  margin: 9px 0;
+		  overflow: hidden;
+		  background-color: #e5e5e5;
+		}
+    </style>
 </head>
 <body>
+	<div class="container-fluid">
+		<div id="parent-row" class="row">
+			<div class="col-md-2">
+			</div>
+
+			<div id="working-div" class="col-md-8">
+				<!--row 1 begins-->
+				<div id="resume-header" class="row">
+					<div class="col-md-2 col-sm-2">
+						<span id="resume-header-span">RESUME</span>
+					</div>
+					
+					<div class="col-md-11 col-sm-11">
+					</div>
+				</div>
+				<!-- Row 1 ends -->
+				<!-- Row 2 begins -->
+				<div id="row2" class="row">
+					<div class="col-md-6 col-sm-6" style="padding-top: 5%;">
+						<span id="name">Kumar Swapnil</span>
+						<br>
+						<span id="tagline">Full Stack Developer</span>
+					</div>
+					<div id="pic-id" class="col-md-6 col-sm-6">
+						<span><i class="fa fa-id-badge fa-5x" aria-hidden="true"></i>
+						</span>
+					</div>
+				</div>
+				<!-- Row 2 ends -->
+				<!-- Row 3 begins -->
+				<div class="row" id="row3">
+					
+					<div class="col-md-12 col-sm-12">
+						<p id="about-me">
+							I am a developer who loves to innovate and develop Web and Android based applications . I Have a sound knowledge of C++, Java, Python and Javascript and have proven my skills by developing various projects. I have willingness to pick up and develop new skills and ability to balance a number of conflicting priorities and make decisions. I am a goal oriented person, focused on improving my skills one byte at a time. 
+						</p>
+					</div>
+					
+				</div>
+				<!-- Row3 ends -->
+
+				<!-- Row 4 Begins -->
+				<div class="row" id="row4">
+					<!-- Row 4 first Column -->
+					<div id="main-resume-left" class="col-md-4">
+						<!-- Row 4-left-1 begins -->
+						<span style="font-size: 18px">Personal</span>
+						<div class="row">
+							<div class="col-md-5 col-sm-5">
+								<ul id="personal-ul">
+									<li class="personal-li li-lhs">Name</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li li-lhs">Birthday</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li li-lhs">Nationality</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li li-lhs">Languages</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li li-lhs">Telephone</li>
+								</ul>
+							</div>
+							<div class="col-md-7 col-sm-7">
+								<ul id="personal-ul">
+									<li class="personal-li">Kumar Swapnil</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li">31/03/1995</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li">Indian</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li">English | Hindi</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li">+91 7404663867</li>
+								</ul>
+							</div>
+						</div>
+						<!-- Row 4-left-1 ends -->
+					</div>
+
+					<!-- Row 4 second column -->
+					<div id="main-resume-right" class="col-md-8">
+					</div>
+
+				</div>
+				<!-- Row 4 ends -->
+
+				<!-- Row 5 begins -->
+				<div class="row" id="row5">
+				</div>
+				<!-- Row 5 ends -->
+
+				<!-- Row 6 begins -->
+				<div class="row" id="row6">
+				</div>
+				<!-- Row 6 ends -->
+			</div>
+		<div class="col-md-2">
+		</div>
+		</div>
+	</div>
 
 </body>
 </html>
