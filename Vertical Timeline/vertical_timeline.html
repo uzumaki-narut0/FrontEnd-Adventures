@@ -21,6 +21,10 @@
     		padding-top: 20px;
     		background-color: #263238;
     	}
+    	#row6{
+    		background-color:#263238;
+    		height: 35px; 
+    	}
     	#resume-header div{
     		text-align: right;
     	}
@@ -86,7 +90,7 @@
     		list-style: none;
     		padding-top: 20px;
     	}
-    	#timeline-ul, #timeline-data-ul{
+    	#timeline-ul, #timeline-data-ul,#timeline-ul-2{
     		list-style: none;
     		position: relative;
     	}
@@ -108,7 +112,7 @@
 		  overflow: hidden;
 		  background-color: #e5e5e5;
 		}
-		.timeline-li i{
+		.timeline-li i, .timeline-li-2 i{
 			width:30px;
 			height: 30px;
 			display: block;
@@ -120,6 +124,10 @@
 			margin-bottom: 70px;
 			margin-top: 20px;
 		}
+		.timeline-li-2{
+			margin-bottom: 30px;
+			margin-top: 20px;
+		}
 		#timeline-ul:after{
 			content: '';
 			width: 2px;
@@ -129,6 +137,16 @@
 			top:20px;
 			left:14px;
 			z-index: -1;
+		}
+		#timeline-ul-2:after{
+			content: '';
+			width: 2px;
+			height: 230px;
+			background-color: black;
+			position: absolute;
+			top:20px;
+			left:14px;
+			z-index: -1;	
 		}
 		.timeline-data-li-heading{
 			font-family: 'Roboto',sans-serif;
@@ -143,8 +161,18 @@
 			margin-top: 25px;
 			margin-right: 0px;
 			margin-left: 5%;
+			margin-bottom: 25px;
 
 		}
+		#left-canvas-1,#left-canvas-2,#left-canvas-3,#left-canvas-4,#left-canvas-5{
+			margin: 0;
+		}
+		#row5{
+			height: 130px;
+			background-color: #546e7a;
+    		box-shadow: #808285 2px 3px 4px; 
+		}
+
     </style>
 </head>
 <body>
@@ -195,7 +223,7 @@
 					<div id="main-resume-left" class="col-md-4 col-sm-4">
 						<!-- Row 4-left-1 begins -->
 						<span style="font-size: 18px">Personal</span>
-						<div class="row">
+						<div class="row" style="margin-bottom: 20px;">
 							<div class="col-md-5 col-sm-5">
 								<ul id="personal-ul">
 									<li class="personal-li li-lhs">Name</li>
@@ -224,6 +252,58 @@
 							</div>
 						</div>
 						<!-- Row 4-left-1 ends -->
+						<span style="font-size: 18px">Tools and Frameworks</span>
+						<!-- Row 4-left-2 begins -->
+						<div class="row">
+							<div class="col-md-5 col-sm-5">
+								<ul id="personal-ul">
+									<li class="personal-li li-lhs">Dev C++</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li li-lhs">Sublime 3</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li li-lhs">Git</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li li-lhs">Docker</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li li-lhs">Heroku</li>
+								</ul>
+							</div>
+							<div class="col-md-7 col-sm-7">
+									<ul id="personal-ul">
+									<li class="personal-li">
+										<canvas id="left-canvas-1">
+											
+										</canvas>
+									</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li">
+										<canvas id="left-canvas-2">
+											
+										</canvas>
+									</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li">
+										<canvas id="left-canvas-3">
+											
+										</canvas>
+									</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li">
+									<canvas id="left-canvas-4">
+											
+										</canvas>
+									</li>
+									<li class="personal-li li-lhs divider"></li>
+									<li class="personal-li">
+										<canvas id="left-canvas-5">
+											
+										</canvas>
+									</li>
+								</ul>
+							</div>
+							</div>
+							<!-- Row four left two ends -->
+
 					</div>
 
 					<!-- Row 4 second column -->
@@ -291,6 +371,80 @@
 								
 						</div>
 						<!-- Row 4 right-2 ends -->
+							<span style="font-size: 18px;padding-bottom:30px; ">Achievements and Awards</span>
+						<!-- Row 4-right-3 starts -->
+						<div class="row">
+								<div class="col-md-1 col-sm-1">
+								<ul id="timeline-ul-2">
+									<li class="timeline-li-2">
+										<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+									</li>
+									<li class="timeline-li-2">
+										<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+									</li>
+									<li class="timeline-li-2">
+										<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+									</li>
+									<li class="timeline-li-2">
+										<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+									</li>
+									
+								</ul>
+							</div>
+							<div style="padding-left: 10px;" class="col-md-11 col-sm-11">
+							<ul id="timeline-data-ul">
+								<li class="timeline-data-li-heading">
+									<span>Runner up, Hackshetra</span>
+								</li>
+								<li class="timeline-data-li-details">
+									<span>
+										a 24 hour hackathon conducted by TechSpardha '17, NIT Kurukshetra.
+										
+									</span>
+
+								</li>
+								<li class="divider">
+								</li>
+						
+								<li class="timeline-data-li-heading">
+									<span>Runner up, Obscura 4.0</span>
+								</li>
+								<li class="timeline-data-li-details">
+									<span>
+										An Online Crypt Hunt, organized by Confluence '17, NIT Kurukshetra.
+										
+									</span>
+
+								</li>
+								<li class="divider">
+								</li>
+								<li style="margin-top: 10px;" class="timeline-data-li-heading">
+									<span>Winner, Chess PowerPlay</span>
+								</li>
+								<li class="timeline-data-li-details">
+									<span>
+										organized by Talent Show '14, NIT Kurukshetra.
+									</span>
+
+								</li>
+								<li class="divider">
+								<li class="timeline-data-li-heading">
+									<span>Winner, Make School's Student App Competition 2017</span>
+								</li>
+								<li class="timeline-data-li-details">
+									<span>
+										10 Upvotes Category
+										
+									</span>
+
+								</li>
+								<li class="divider">
+								</li>
+							</ul>
+							</div>
+						</div>
+						<!--Row 4-right-3 ends  -->
+
 					</div>
 
 				</div>
@@ -339,6 +493,28 @@
 
 			c.stroke();
 		}
+		
+	</script>
+	<script type="text/javascript">
+
+		var canvas_left_Arr = ['left-canvas-1','left-canvas-2','left-canvas-3','left-canvas-4','left-canvas-5'];
+
+		// var canvas_left = document.getElementById('left-canvas-1');
+		
+
+		for(var j=0 ; j<5 ; j++)
+		{
+			var x = document.getElementById(canvas_left_Arr[j]);
+			drawCylinderOnCanvas(x);
+		}
+
+		function drawCylinderOnCanvas(canvas_left){
+			canvas_left.width = 130;
+			canvas_left.height = 15;
+			var ctx = canvas_left.getContext('2d');
+			ctx.fillRect(0,0,130,30);	
+		}
+		
 		
 	</script>
 
