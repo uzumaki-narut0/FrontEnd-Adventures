@@ -75,9 +75,20 @@
     		/*box-shadow: #808285 2px 3px 4px;*/
     		/*z-index: 100;*/
     	}
+    	#main-resume-right{
+    		padding-right: 5%;
+    		padding-left: 5%;
+    		padding-top: 20px;
+    		background-color: rgba(255,255,255,0.8);
+    		border-right: 1px solid #cfd8dc;
+    	}
     	#personal-ul{
     		list-style: none;
     		padding-top: 20px;
+    	}
+    	#timeline-ul{
+    		list-style: none;
+    		position: relative;
     	}
     	.personal-li{
     		font-family: 'Roboto', sans-serif;
@@ -93,6 +104,28 @@
 		  margin: 9px 0;
 		  overflow: hidden;
 		  background-color: #e5e5e5;
+		}
+		.timeline-li i{
+			width:30px;
+			height: 30px;
+			display: block;
+			text-align: center;
+			line-height: 30px;
+
+		}
+		.timeline-li{
+			margin-bottom: 40px;
+			margin-top: 20px;
+		}
+		#timeline-ul:after{
+			content: '';
+			width: 2px;
+			height: 160px;
+			background-color: black;
+			position: absolute;
+			top:20px;
+			left:14px;
+			z-index: -1;
 		}
     </style>
 </head>
@@ -141,7 +174,7 @@
 				<!-- Row 4 Begins -->
 				<div class="row" id="row4">
 					<!-- Row 4 first Column -->
-					<div id="main-resume-left" class="col-md-4">
+					<div id="main-resume-left" class="col-md-4 col-sm-4">
 						<!-- Row 4-left-1 begins -->
 						<span style="font-size: 18px">Personal</span>
 						<div class="row">
@@ -176,7 +209,25 @@
 					</div>
 
 					<!-- Row 4 second column -->
-					<div id="main-resume-right" class="col-md-8">
+					<div id="main-resume-right" class="col-md-8 col-sm-8">
+						<span style="font-size: 18px;padding-bottom:30px; ">Education</span>
+						<div class="row" id="education-details">
+							<div class="col-md-2">
+								<ul id="timeline-ul">
+									<li class="timeline-li">
+										<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+									</li>
+									<li class="timeline-li">
+										<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+									</li>
+									<li class="timeline-li">
+										<i class="fa fa-dot-circle-o" aria-hidden="true"></i>
+									</li>
+								</ul>
+							</div>
+							<div class="col-md-10">
+							</div>
+						</div>
 					</div>
 
 				</div>
