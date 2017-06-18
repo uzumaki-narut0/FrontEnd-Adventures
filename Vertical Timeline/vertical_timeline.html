@@ -172,6 +172,27 @@
 			background-color: #546e7a;
     		box-shadow: #808285 2px 3px 4px; 
 		}
+		.hobby img{
+			width:60%;
+			display: block;
+			/*z-index: 2000;*/
+
+		}
+		.hobby{
+			background-color: #eceff1;
+			padding: 10px 0 10px 20px;
+			border-radius: 2px;
+			box-shadow: #808285 2px 3px 4px;
+			/*z-index: 1000;*/
+		}
+		.foot-resume img{
+			width:60%;
+			display: block;
+			margin:auto auto;
+			margin-top: 25%;
+			z-index: 1000;
+			/*background-color: #fff;*/
+		}
 
     </style>
 </head>
@@ -303,6 +324,22 @@
 							</div>
 							</div>
 							<!-- Row four left two ends -->
+							<br>
+
+							<span style="font-size: 18px">Interests</span>
+							<!-- Row four left three begin -->
+							<div class="row">
+									<div class="hobby col-md-6 col-sm-6">
+										<img src="../assets/img/hobby (1).png">
+										<img style="margin-top: 25px;" src="../assets/img/hobby (3).png">
+									</div>
+									<div class="hobby col-md-6 col-sm-6">
+										<img src="../assets/img/hobby (2).png">
+										<img style="margin-top: 25px;" src="../assets/img/icon (2).png">
+									</div> 
+							</div>
+							<!-- Row four left three ends -->
+
 
 					</div>
 
@@ -452,11 +489,25 @@
 
 				<!-- Row 5 begins -->
 				<div class="row" id="row5">
+					<div class="col-md-3 col-sm-3">
+					</div>
+					<div class="foot-resume col-md-2 col-sm-2">
+						<img src="../assets/img/1.png">
+					</div>
+					<div class="foot-resume col-md-2 col-sm-2">
+						<img src="../assets/img/2.png">
+					</div>
+					<div class="foot-resume col-md-2 col-sm-2">
+						<img src="../assets/img/3.png">
+					</div>
+					<div class="col-md-3 col-sm-3">
+					</div>
 				</div>
 				<!-- Row 5 ends -->
 
 				<!-- Row 6 begins -->
 				<div class="row" id="row6">
+						
 				</div>
 				<!-- Row 6 ends -->
 			</div>
@@ -512,6 +563,7 @@
 			canvas_left.width = 130;
 			canvas_left.height = 15;
 			var ctx = canvas_left.getContext('2d');
+			ctx.fillStyle = '#263238';
 			ctx.fillRect(0,0,130,30);	
 		}
 		
