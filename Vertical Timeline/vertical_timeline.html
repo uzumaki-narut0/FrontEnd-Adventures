@@ -139,6 +139,12 @@
 			font-family: 'Roboto',sans-serif;
 			font-size: 0.95em;
 		}
+		canvas{
+			margin-top: 25px;
+			margin-right: 0px;
+			margin-left: 5%;
+
+		}
     </style>
 </head>
 <body>
@@ -249,7 +255,9 @@
 									</span>
 
 								</li>
-								<li style="margin-top: 40px;" class="timeline-data-li-heading">
+								<li class="divider">
+								</li>
+								<li style="margin-top: 10px;" class="timeline-data-li-heading">
 									<span>Patna Central School, Patna</span>
 								</li>
 								<li class="timeline-data-li-details">
@@ -260,10 +268,29 @@
 									</span>
 
 								</li>
+								<li class="divider">
 							</ul>
 							</div>
 						</div>
 						<!-- Row 4-right-1 end -->
+							<span style="font-size: 18px;">Technical Skills</span>
+						<!-- Row 4-right-2 starts -->
+						<div class="row" style="padding-left: 30px">
+								<canvas id="c1">
+									
+								</canvas>
+								<canvas id="c2">
+									
+								</canvas>
+								<canvas id="c3">
+									
+								</canvas>
+								<canvas id="c4">
+									
+								</canvas>
+								
+						</div>
+						<!-- Row 4 right-2 ends -->
 					</div>
 
 				</div>
@@ -283,6 +310,37 @@
 		</div>
 		</div>
 	</div>
+
+	<script type="text/javascript">
+
+		var canvasArr = ['c1', 'c2' ,'c3' ,'c4'];
+		var textArr = ['C++', 'Java', 'Python', 'JS'];
+		var percentArr = [];
+		for(var i=0 ; i<4 ; i++)
+		{
+			var canvas = document.getElementById(canvasArr[i]);
+			drawOnCanvas(canvas,textArr[i]);
+		}
+		function drawOnCanvas(canvas,text){
+			// var canvas = document.getElementById();
+			console.log(canvas);
+			canvas.width = 80;
+			canvas.height = 80;
+			var c = canvas.getContext('2d');
+			c.lineWidth = 6;
+			c.strokeStyle = '#263238';
+			c.beginPath();
+			c.arc(40,40,36,0,2*Math.PI);
+
+			c.font = '14px "Roboto"';
+			c.textAlign = 'center';
+			c.strokeStyle = '#263238';
+			c.fillText(text,canvas.width*0.5,canvas.height*0.5,canvas.width);
+
+			c.stroke();
+		}
+		
+	</script>
 
 </body>
 </html>
