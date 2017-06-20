@@ -1,0 +1,42 @@
+html,body,.container{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.first-screen{
+	/*height: 100%;*/
+	background-color: #f69679;
+}
+.second-screen{
+	background-color: #09f;
+
+}
+.third-screen{
+	background-color: #c48919;
+}
+.fourth-screen{
+	background-color: #c3c2b9;
+}
+
+body{
+	position: relative;
+}
+#pagination-bullets{
+	margin: 0;
+	margin-right: 3%;
+	/*padding: 0;*/
+	position: fixed;
+	bottom: 0;
+	top:37.5%;
+	height:25%;
+	right:0;
+	list-style: none;
+	/*background-color: #000;*/
+}
+#pagination-bullets li{
+	background-color: #000;
+	margin-bottom:20px;
+	width:16px;
+	height:16px;
+	border-radius: 50%;
+}

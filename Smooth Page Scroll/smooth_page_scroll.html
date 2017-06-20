@@ -1,37 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>2D Carousel</title>
+	<title>Smooth Screen Scroll</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
     <script src="../assets/js/jquery.js"></script>
     <script src="../assets/js/bootstrap.js"></script>
     <script src="https://use.fontawesome.com/795dd48394.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet"> 
-    <style type="text/css">
-    	html,body,.container{
-    		height: 100%;
-    		margin: 0;
-    		padding: 0;
-    	}
-    	.first-screen{
-    		/*height: 100%;*/
-    		background-color: #f69679;
-    	}
-    	.second-screen{
-    		background-color: #09f;
-
-    	}
-    	.third-screen{
-    		background-color: #c48919;
-    	}
-    	.fourth-screen{
-    		background-color: #c3c2b9;
-    	}
-    </style>
+    <link rel="stylesheet" type="text/css" href="smooth_page_scroll.css">
 </head>
 
 <body>
+	<ul id="pagination-bullets">
+			<li id="screen1-link" ></li>
+			<li id="screen2-link"></li>
+			<li id="screen3-link"></li>
+			<li id="screen4-link"></li>
+	</ul>
 	<div class="container first-screen">
 	</div>
 	<div class="container second-screen">
@@ -40,6 +26,9 @@
 	</div>
 	<div class="container fourth-screen">
 	</div>
+
+	<script src="smooth_page_scroll.js">
+	</script>
 
 </body>
 </html>

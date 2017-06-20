@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="https://use.fontawesome.com/795dd48394.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet"> 
+    <style type="text/css">
+    	html,body, .container-fluid{
+    		height: 100%;
+    	}
+    	*{
+    		margin: 0;
+    		padding: 0;
+    	}
+    	.chat-container{
+    		/*width: 90%;*/
+    		height: 100%;
+    		margin: 0% 2%;
+    		box-sizing: border-box;
+    		box-shadow:17px 20px 25px 0 rgba(46,61,73,.15);
+
+    	}
+    	#chat-top-ui{
+    		height:15%;
+    		min-height: 75px;
+    		/*background-image: url('../assets/img/450.jpg');*/
+    		/*background-size: cover;*/
+    		background-color: #304ffe;
+    	}
+    	#chat-content{
+    		padding-top: 1%;
+    		padding-bottom: 5%;
+    		position: relative;
+    		height: 75%;
+    		border-right: 1px solid  #3f51b5;
+    		border-left: 1px solid  #3f51b5;
+    		/*border-bottom: 1px solid orange;*/
+    		/*background-color: #e8eaf6;*/
+
+    	}
+    	#chat-input-ui{
+    		height: 10%;
+    		/*background-color:#2b313f;*/
+    		border: 1px solid #2b313f;
+    	}
+    	.chat-top-ui-overlay{
+    		/*background: linear-gradient(-90deg,rgba(208, 154, 155,0.3),rgba(208, 154, 155,0.3));*/
+    		height: 100%;
+
+    	}
+    	.img-container{
+    		margin-top: 24%;
+    		width: 64px;
+    		/*background-color: red;*/
+    		/*border-radius: 50%;*/
+    		overflow: hidden;
+    		height: 64px;
+    	}
+    	.img-container img{
+    		width:64px;
+    		display: block;
+    		margin: auto auto;
+    	}
+    	#left-pop-up{
+    		float: left;
+
+    		box-shadow:12px 15px 20px 0 rgba(46,61,73,.15);
+    		padding: 8px 8px;
+    		/*border-radius: 12%;*/
+    		font-family: 'Roboto',sans-serif;
+    		background-color: #efefef;
+    		color: rgba(0,0,0,0.9);
+    	}
+    	#right-pop-up{
+    		
+    		box-sizing: border-box;
+    		float: right;
+    		position: relative;
+
+    		/*float: right;*/
+    		/*right: -4%;*/
+    		background-color: #A5D175;
+    		color: #fff;
+    		display: inline-block;
+    		/*float: right;*/
+    		box-shadow:12px 15px 20px rgba(46,61,73,.20);
+    		padding: 8px 8px;
+    		/*border-radius: 4%;*/
+    		font-family: 'Roboto',sans-serif;	
+    	}
+    	#left-pop-up-container{
+    		padding-left: 3%;
+    		padding-top: 2%;
+    		clear: right;
+    		padding-right: 30%;
+    	}
+    	#right-pop-up-container{
+    		padding-top: 2%;
+    		padding-right: 3%;
+    		padding-left: 30%;
+    		z-index: 10;
+    		clear: left;
+    		/*max-width: 60%;*/
+    	}
+    	#chat-app-name{
+    		font-family: 'Lato',sans-serif;
+    		font-size: 20px;
+    		/*margin-top: 5%;*/
+    		color: #fff;
+    		padding-left: 5%;
+    	}
+    	#chat-app-text{
+    		font-family: 'Lato',sans-serif;
+    		font-size: 16px;
+    		/*margin-top: 5%;*/
+    		color: #fff;
+    		padding-left: 5%;	
+    	}
+    	#chat-send-button{
+    		height: 100%;
+    		font-family: 'Lato',sans-serif;
+    		font-size: 16px;
+    		background-color: #304ffe;
+    		color: #fff;
+    		width: 100%;
+    		border:none;
+
+    	}
+    	#chat-send-msg{
+    		position: relative;
+    		height: 100%;
+    		border:none;
+    		font-size: 16px;
+    		font-family: 'Roboto',sans-serif;
+    		width: 100%;	
+    	}
+    	.chat-input-left{
+    		/*padding-right: 0;*/
+    		/*overflow-y:hidden;*/
+    		overflow:hidden;
+    	}
+    	.chat-input-left:after{
+    		content: '';
+    		position: absolute;
+    		background-color: #304ffe;
+    		height: 30%;
+    		width: 40px;
+    		bottom: 0;
+    		transform: rotateZ(-45deg);
+    		/*right: 10px;*/
+    	}
+    </style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row" style="height: 100%">
+			<div class="chat-container col-md-4 col-sm-5">
+			<div id="chat-top-ui" class="row">
+					<div class="col-md-2 col-sm-2" style="height:100%;">
+						<div class="img-container">
+							<img src="../assets/img/crown(1).png">
+						</div>
+					</div>
+					<div class="col-md-10 col-sm-10" style="margin-top: 4%;">
+						<span id="chat-app-name">You are talking to ...</span>
+						<br>
+						<span id="chat-app-text">Kumar Swapnil</span>
+					</div>
+					<!-- <div class="col-md-2 col-sm-2"></div> -->
+					<!-- <div class="col-md-2 col-sm-2"></div> -->
+			</div>
+			<div id="chat-content" class="row">
+				<div id="left-pop-up-container">
+					<div id="left-pop-up">
+						You in office?
+					</div>
+				</div>
+				<div id="right-pop-up-container">
+					<div id="right-pop-up">
+						yup! Any plans for tonight?
+					</div>
+				</div>
+				<div id="left-pop-up-container">
+					<div id="left-pop-up">
+						yup! Would watch Naruto!
+					</div>
+				</div>
+				<div id="right-pop-up-container">
+					<div id="right-pop-up">
+						Great! I am watching Your lie in April. :)
+						Great! I am watching Your lie in April. :)
+					</div>
+				</div>
+			</div>
+			<div id="chat-input-ui" class="row">
+				<div class="chat-input-left col-md-10 col-sm-10" style="height: 100%;position: relative;">
+					<input id="chat-send-msg" type="text" placeholder="Type message...">
+				</div>
+				<div class="col-md-2 col-sm-2" style="height: 100%;padding: 0;">
+					<input id="chat-send-button" type="button" value="Send">
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

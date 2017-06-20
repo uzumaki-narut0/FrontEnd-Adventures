@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<title>Radial Progress Bars</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="https://use.fontawesome.com/795dd48394.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <style type="text/css">
+    *{
+    	margin: 0;
+    	padding: 0;
+    }
+    	#bar-container{
+    		/*position: relative;*/
+    		height: 300px;
+    		width:300px;
+    		/*background-color: red;*/
+    	}
+    	#bigger-circle{
+    		position: relative;
+    		height: 300px;
+    		width: 300px;
+    		background-color: grey;
+    		box-sizing: border-box;
+    		/*position: relative;*/
+    		border-radius: 50%;
+    		box-shadow:12px 15px 20px 0 rgba(46,61,73,.15);
+    		z-index: 2;
+    		
+    	}
+		#bigger-circle:hover{
+			box-shadow: 1px 1px 1px 1px rgba(46,61,73,.30);
+		}
+    	#smaller-circle{
+    		display: inline-block;
+    		margin-left: 5%;
+    		margin-right: 5%;
+    		margin-top: 5%;
+    		margin-bottom:5%; 
+    		/*border:10px solid yellow;*/
+    		box-sizing: border-box;
+    		height: 90%;
+    		width: 90%;
+    		background-color: #fff;
+    		border-radius: 50%;
+    	}
+    </style>
+</head>
+<body>
+	<div id="bar-container">
+		<div id="bigger-circle">
+			<div id="smaller-circle">
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
