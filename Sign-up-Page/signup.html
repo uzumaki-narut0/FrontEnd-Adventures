@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="https://use.fontawesome.com/795dd48394.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet"> 
+    <style type="text/css">
+    	html,body,.container-fluid{
+    		height: 100%;
+    	}
+    	.container-fluid{
+    		position: relative;
+    		overflow: hidden;
+    	}
+    	#container-tilted-overlay,#container-tilted-overlay-2,#container-tilted-overlay-3{
+    		height: 100%;
+    		/*margin-top: 30%;*/
+    		width: 100%;
+    		position: absolute;
+    		left:0;
+    		top:0;
+    		background-image: url(../assets/img/chess9.png);
+    		background-size: cover;
+    		z-index: -10;
+    		-webkit-clip-path: polygon(50% 0%, 100% 0, 100% 50%);
+			clip-path: polygon(50% 0%, 100% 0, 100% 50%);
+    	}
+    	#container-tilted-overlay{
+    		background-image: none;
+    		background-color: #00bfa5;
+    	}
+    	#container-tilted-overlay-2{
+    		background-image: none;
+    		background-color: #00bfa5;
+    		-webkit-clip-path: polygon(0 50%, 0 100%, 50% 100%);
+			clip-path: polygon(0 50%, 0 100%, 50% 100%);
+			box-shadow:17px 20px 25px 0 rgba(46,61,73,.15);
+    	}
+    	#container-tilted-overlay-3{
+    		-webkit-clip-path: polygon(50% 0%, 100% 50%, 100% 100%, 50% 100%, 0 50%, 0 0);
+			clip-path: polygon(50% 0%, 100% 50%, 100% 100%, 50% 100%, 0 50%, 0 0);
+			/*filter: grayscale(10%);;*/
+    	}
+    	#login-div{
+    		background-color: rgba(0,0,0,0.13);
+    		height: 100%;
+    		box-shadow:12px 15px 20px 0 rgba(255,255,255,0.2);
+    		
+    	}
+    	#login-root{
+    		margin-top: 10%;
+    		margin-bottom: 10%;
+    		height: 80%;
+
+    	}
+    	#app-name{
+    		text-align: center;
+    		font-size: 48px;
+    		font-family: 'Lato',sans-serif;
+    		color: #fff;
+    	}
+    	input{
+    		font-size: 24px;
+    		font-family: 'Raleway',sans-serif;
+    		background:none;
+    		border:none;
+    		color: #fff;
+    		padding: 20px 20px 0px 20px;
+    	}
+    	#logo{
+    		position: absolute;
+    		font-size: 36px;
+    		font-family: 'Lato',sans-serif;
+    		top:20px;
+    		right: 20px;
+    		background-color: rgba(0,0,0,0.13);
+    		padding: 20px 20px;
+    		/*border-radius: 5%;*/
+    		color: #fff;
+    		box-shadow:12px 15px 20px 0 rgba(255,255,255,0.2);
+    	}
+
+    	.divider {
+		  height: 1px;
+		  width:90%;
+		  display:block; /* for use on default inline elements like span */
+		  margin: 5px 20px 10px 20px;
+		  overflow: hidden;
+		  background-color: #e5e5e5;
+		}
+		#btn{
+			background-color: rgba(0,0,0,0.2);
+			padding-top: 10px;
+			margin-top: 30px;
+			padding-bottom: 10px;
+			float: right;
+			z-index: 2000;
+			box-shadow:10px 12px 15px 0 rgba(255,255,255,0.10);
+		}
+		#btn:hover,#logo:hover{
+			box-shadow: none;
+		}
+
+    </style>
+</head>
+<body>
+	<div class="container-fluid">
+
+		<div id="logo">
+			Queens Gambit
+		</div>
+		<div id="container-tilted-overlay">
+		</div>
+		<div id="container-tilted-overlay-2">
+		</div>
+		<div id="container-tilted-overlay-3">
+		</div>
+
+		<div id="login-root" class="row">
+			<div class="col-md-1 col-sm-1"></div>
+			<div id="login-div" class="col-md-5 col-sm-5">
+				<div id="app-name" class="row">
+					Sign up
+				</div>
+				<div id="sign-up-form">
+					<input type="text" placeholder="Name">
+					<span class="divider"></span>
+					<input type="text" placeholder="Email Id">
+					<span class="divider"></span>
+					<input type="Password" placeholder="Password">
+					<span class="divider"></span>
+					<input type="Password" placeholder="Retype Password">
+					<span class="divider"></span>
+					<input id="btn" type="button" value="SIGN ME UP">
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6"></div>
+		</div>
+	</div>
+
+
+</body>
+</html>

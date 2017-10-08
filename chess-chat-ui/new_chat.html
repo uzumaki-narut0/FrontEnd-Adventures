@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="https://use.fontawesome.com/795dd48394.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <style type="text/css">
+    	*{
+    		margin:0;
+    		padding: 0;
+    		font-family: 'Lato',sans-serif;
+    	}
+    	#chat-root{
+    		/*border-top-left-radius: 20px;*/
+    		/*border-top-right-radius: 20px;*/
+    		position: fixed;
+    		bottom: 0;
+    		box-shadow: 0 4px 8px rgba(0,0,0,.25);
+    		right: 5%;
+    		height: 35px;
+    		background-color: #00bf9a;
+    		width:250px;
+    	}
+    	#glitch-text-1,#glitch-text-2,#glitch-text-3{
+    		position: absolute;
+    		left: 10px;
+    		top: 10px;
+    		font-size: 18px;
+    		/*visibility: hidden;*/
+    		color: black;
+
+    	}
+    	.visible-class{
+    		visibility: visible;
+    	}
+    </style>
+</head>
+<body>
+	<div id="chat-root">
+
+	</div>
+	<div id="glitch-effect">
+		<span  id="glitch-text-1" class="visible-class">Queen's Gambit</span>
+		<span  id="glitch-text-2">Quien's Gambet</span>
+		<!-- <span id="glitch-text-3">Kueen's GAmbit</span> -->
+
+	</div>
+
+	<script type="text/javascript">
+		setInterval(function(){
+			// $("#toggle").click(function() {
+			    if($('#glitch-text-1').css('visibility') != 'visible'){
+			        $("#glitch-text-1").css('visibility', 'visible');
+			    }
+			    else{
+			        $("#glitch-text-1").css('visibility', 'hidden');
+			    }
+			    if($('#glitch-text-2').css('visibility') != 'visible'){
+			        $("#glitch-text-2").css('visibility', 'visible');
+			    }
+			    else{
+			        $("#glitch-text-2").css('visibility', 'hidden');
+			    }
+			// });
+		},1000);
+	</script>
+</body>
+</html>
