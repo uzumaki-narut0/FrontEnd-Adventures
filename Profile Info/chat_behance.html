@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css">
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.js"></script>
+    <script src="https://use.fontawesome.com/795dd48394.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet"> 
+</head>
+<style type="text/css">
+	html, body, .container-fluid, #chessWrapper{
+    		height: 100%;
+    		/*overflow: visible;*/
+    	}
+    	#chessWrapper{
+    		/*background-color: #5E9CA9;*/
+    	}
+    	#profile-header{
+    		height: 45px;
+    		background-color: #DDA611;
+    	}
+    	#profile-info{
+    		background-image: url('chess2.jpg');
+    		height: 37%;
+    		/*background-color: yellow;*/
+    		background-position: center;
+    		background-size: cover;
+    	}
+    	#profile-mini-stats{
+    		height: 57px;
+    		background-color: #6B7E91;
+    	}
+    	#chat-div{
+    		height: 46%;
+    		background-color: #383D44;
+    	}
+    	#profile-info .col-md-12
+    	{
+    		height: 100%;
+    	}
+    	#profile-info-overlay{
+    		height: 100%;
+    		
+    		background-color: rgba(0,0,0,0.6);
+    	}
+    	#profile-pic-wrapper{
+    		padding-top: 4%;
+    		text-align: center;
+    		/*margin-bottom: -40px;*/
+    	}
+    	#user-pic{
+    		height: 72px;
+    		/*padding: 5% 30%;*/
+    		width: 72px;
+    	}
+    	#user-name,#total-games-wrapper{
+    		color: #fff;
+    		font-family: 'Raleway', sans-serif;
+    		font-size: 24px;
+    		/*font-weight: bold;*/
+    		/*margin-top: 10px;*/
+    	}
+    	#total-games-wrapper{
+    		font-size: 20px;
+    		margin-top: 15px;
+    	}
+    	#user-name-wrapper{
+    		padding-top: 10px;
+    		padding-bottom: 5px;
+    	}
+    	#user-name-wrapper, #user-category-wrapper,#total-games-wrapper{
+    		/*padding: 0 25% 0 28%;*/
+    		text-align: center;
+
+    	}
+    	#user-category-wrapper button{
+    		background-color: #DDA611;
+    		color: #fff;
+    		/*border-color: #fff;*/
+    		font-family: 'Lato', sans-serif;
+    		font-size: 14px;
+    		/*border-width: 10px;*/
+    		border-radius: 0;
+    		font-weight: bolder;
+    	}
+    	#heading{
+    		vertical-align: middle;
+    		font-size: 18px;
+    		font-family:sans-serif;
+    		color: #fff;
+    		text-align: center;
+    		margin-top: 12px;
+    	}
+    	#profile-mini-stats div{
+    		margin-top: 15px;
+    		font-family: 'Raleway', sans-serif;
+    		font-size: 18px;
+    		color: #fff;
+    		text-align: center;
+    	}
+    	.container-fluid{
+    		padding: 0;
+    	}
+    	#game-div{
+    		background-color: #00A876;
+    		height: 100%;
+    		padding: 0;
+    	}
+</style>
+<body>
+	<div class="container-fluid">
+		<div id="game-div" class="col-md-8">
+		</div>
+
+		<div id="chessWrapper" class="col-md-4">
+			<div id="profile-header" class="row">
+			<!-- 	<div class="col-md-1">
+				</div> -->
+
+				<div id="heading" class="col-md-12">
+					<i  class="fa fa-toggle-off fa" aria-hidden="true"></i>
+					PROFILE
+				</div>
+			</div>
+
+			<div id="profile-info" class="row">
+				<div class="col-md-12">
+					<div id="profile-info-overlay" class="row">
+						<div class="col-md-12">
+							<div id="profile-pic-wrapper" class="row">
+								<div class="col-md-12">
+									<img id="user-pic" class="img-circle" src="crown(2).png">
+								</div>
+							</div>
+							<div id="user-name-wrapper" class="row">
+								<div class="col-md-12">
+									<span id="user-name">
+										Kumar Swapnil
+									</h2>
+								</div>
+							</div>
+							<div id="user-category-wrapper" class="row">
+								<div class="col-md-12">
+									<button class="btn rounded-circle">
+										1st Category
+									</button>
+								</div>
+							</div>
+							<div id="total-games-wrapper" class="row">
+								<div class="col-md-12">
+									<h4>
+										36 GAMES
+									</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="profile-mini-stats" class="row">
+				<div class="col-md-4">
+					<span style="font-family: sans-serif;font-weight: bold;color: #FE7C60;"> WON</span> 21
+				</div>
+				<div class="col-md-4">
+					<span style="font-family: sans-serif;font-weight: bold;color: #F8C82D;">LOST</span> 9
+				</div>
+				<div class="col-md-4">
+					<span style="font-family: sans-serif;font-weight: bold;color: #0DCCC0;">DRAW</span> 6
+				</div>
+			</div>
+
+			<div id="chat-div" class="row">
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>
